@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Input } from "./components/ui/input";
 import { Button } from "./components/ui/button";
 import toast from "react-hot-toast";
-import reactSvg from "@/assets/react.svg?url";
+import emSphereLogo from "@/assets/eMPower_logo.png?url";
 
 export default function Home() {
   const [name, setName] = useState<string | null>(null);
@@ -22,7 +22,7 @@ export default function Home() {
       }
       const n = new Notification("You have a new message!", {
         body: `Hello, ${name}!`,
-        icon: reactSvg,
+        icon: emSphereLogo,
         tag: "new-alert",
         requireInteraction: true,
       });
