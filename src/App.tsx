@@ -18,7 +18,9 @@ export default function Home() {
     try {
       const res = await fetch("https://node-emsphere.onrender.com/api/send", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json",
+          "Authorization" : "Bearer dev-token"
+         },
         body: JSON.stringify({
           userId: "user123",
           title: "You have a new message!",
